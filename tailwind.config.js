@@ -7,6 +7,20 @@ module.exports = {
       fontFamily: {
         'poppins': ["'Poppins'", 'sans-serif'],
       },
+      keyframes: {
+        'bottom-top-fade-in': {
+          '0%': { 'margin-top': '200px', opacity: 0 },
+          ' 100%': { 'margin-top': '0px', opacity: 1 },
+        },
+        'fade-in': {
+          '0%': { opacity: 0 },
+          ' 100%': { opacity: 1 },
+        }
+      },
+      animation: {
+        'bottom-top-fade-in': 'bottom-top-fade-in 1s ease-in-out',
+        'fade-in': 'fade-in 1s ease-in-out 1s forwards',
+      },
     },
   },
   plugins: [require('daisyui')],

@@ -4,6 +4,7 @@ import { loadFull } from 'tsparticles';
 
 const ParticleBackground = () => {
 
+    // memoizing the particle options for optimization
     const options = useMemo(() => {
         return {
             particles: {
@@ -77,6 +78,7 @@ const ParticleBackground = () => {
         console.log(container);
     };
 
+    // rendering particle background component here
     return (
         <Particles
             id='tsparticles'

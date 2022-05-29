@@ -3,7 +3,7 @@ import Hero from './components/Hero/Hero';
 
 function App() {
   return (
-    <main className='App bg-primary min-h-screen' data-theme='portfolio-theme'>
+    <main className='App bg-primary min-h-screen font-poppins' data-theme='portfolio-theme'>
       <Hero />
     </main>
   );

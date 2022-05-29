@@ -59,7 +59,7 @@ const ParticleBackground = () => {
                 }
             },
             interactivity: {
-                detect_on: 'canvas',
+                detect_on: 'window',
             },
             retina_detect: true
         }

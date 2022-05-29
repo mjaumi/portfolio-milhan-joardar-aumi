@@ -1,10 +1,11 @@
 import './App.css';
+import Hero from './components/Hero/Hero';
 
 function App() {
   return (
-    <div className='App bg-primary min-h-screen' data-theme='portfolio-theme'>
-      <button className='btn btn-primary'>YEY</button>
-    </div>
+    <main className='App bg-primary min-h-screen' data-theme='portfolio-theme'>
+      <Hero />
+    </main>
   );
 }
 

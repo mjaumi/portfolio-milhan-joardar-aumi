@@ -22,6 +22,7 @@ const FullPageWrapper = () => {
             anchors={anchors}
             navigation
             navigationTooltips={anchors}
+            responsiveWidth={750}
             onLeave={(origin, destination, direction) => {
 
             }}

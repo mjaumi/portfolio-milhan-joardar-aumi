@@ -12,7 +12,7 @@ import Footer from '../Footer/Footer';
 
 const anchors = ['Home', 'About', 'Services', 'Expertise', 'Projects', 'Blogs', 'Contact', 'Footer'];
 
-const FullPageWrapper = () => {
+const FullPageWrapper = ({ setNav }) => {
     // integration of react hooks
     const [currentSection, setCurrentSection] = useState('');
 
@@ -40,6 +40,7 @@ const FullPageWrapper = () => {
                 if ((state.direction === 'up' && fullpageApi?.getActiveSection().anchor === 'Home') || state.direction === null) {
                     setCurrentSection(fullpageApi?.getActiveSection().anchor);
                 }
+                setNav(fullpageApi?.getActiveSection().anchor);
 
                 return (
                     <>

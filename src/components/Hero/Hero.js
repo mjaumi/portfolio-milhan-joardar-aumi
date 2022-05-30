@@ -47,10 +47,10 @@ const Hero = ({ currentSection }) => {
                         />
                     </div>
                     <div className={`mt-20 opacity-0 ${showAnimation ? 'animate-fade-in' : 'opacity-0'}`}>
-                        <button className='btn btn-accent text-secondary gap-2 capitalize w-60'>
+                        <a href='#Contact' className='btn btn-accent text-secondary gap-2 capitalize w-60'>
                             Hire Me
                             <FontAwesomeIcon icon={faClipboardList} />
-                        </button>
+                        </a>
                         <button onClick={() => handleDownloadResume()} className='btn gap-2 text-secondary capitalize mt-8 md:mt-0 md:ml-8 w-60'>
                             Download My Resume
                             <FontAwesomeIcon icon={faDownload} />

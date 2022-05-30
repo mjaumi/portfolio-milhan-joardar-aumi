@@ -3,8 +3,14 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import './FullPageWrapper.css';
 import Hero from '../Hero/Hero';
 import About from '../About/About';
+import Services from '../Services/Services';
+import Expertise from '../Expertise/Expertise';
+import Projects from '../Projects/Projects';
+import Blogs from '../Blogs/Blogs';
+import Contact from '../Contact/Contact';
+import Footer from '../Footer/Footer';
 
-const anchors = ['Home', 'About', 'Services'];
+const anchors = ['Home', 'About', 'Services', 'Expertise', 'Projects', 'Blogs', 'Contact', 'Footer'];
 
 const FullPageWrapper = () => {
     // integration of react hooks
@@ -16,18 +22,21 @@ const FullPageWrapper = () => {
             anchors={anchors}
             navigation
             navigationTooltips={anchors}
-            sectionsColor={['', '', '']}
             onLeave={(origin, destination, direction) => {
 
             }}
             afterLoad={(origin, destination, direction, trigger) => {
-                if (direction === 'down') {
-                    setCurrentSection(destination.anchor);
+                if (destination.anchor !== 'Home') {
+                    if (destination.anchor === 'Footer') {
+                        setCurrentSection('Contact');
+                    } else {
+                        setCurrentSection(destination.anchor);
+                    }
                 }
             }}
             render={({ state, fullpageApi }) => {
                 fullpageApi?.setScrollingSpeed(1200);
-                if (state.direction === 'up' || state.direction === null) {
+                if ((state.direction === 'up' && fullpageApi?.getActiveSection().anchor === 'Home') || state.direction === null) {
                     setCurrentSection(fullpageApi?.getActiveSection().anchor);
                 }
 
@@ -35,6 +44,12 @@ const FullPageWrapper = () => {
                     <>
                         <Hero currentSection={currentSection} />
                         <About currentSection={currentSection} />
+                        <Services currentSection={currentSection} />
+                        <Expertise currentSection={currentSection} />
+                        <Projects currentSection={currentSection} />
+                        <Blogs currentSection={currentSection} />
+                        <Contact currentSection={currentSection} />
+                        <Footer />
                     </>
                 );
             }}

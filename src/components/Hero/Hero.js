@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClipboardList, faDownload } from '@fortawesome/free-solid-svg-icons';
 import Typewriter from 'typewriter-effect';
+import { saveAs } from 'file-saver';
 import ParticleBackground from '../ParticleBackground/ParticleBackground';
 
 const Hero = ({ currentSection }) => {
     // integration of react hooks
     const [showAnimation, setShowAnimation] = useState(false);
+
+
 
     useEffect(() => {
         if (currentSection === 'Home') {
@@ -15,6 +18,10 @@ const Hero = ({ currentSection }) => {
             setShowAnimation(false);
         }
     }, [currentSection]);
+
+    const handleDownloadResume = () => {
+        saveAs('https://drive.google.com/file/d/1P_qB7d6S5uvNK0Alas7Uz8O43bG6jKVz/view?usp=sharing', 'Resume of Milhan Joardar Aumi.pdf');
+    }
 
     // rendering hero component here
     return (
@@ -44,7 +51,7 @@ const Hero = ({ currentSection }) => {
                             Hire Me
                             <FontAwesomeIcon icon={faClipboardList} />
                         </button>
-                        <button className='btn gap-2 text-secondary capitalize mt-8 md:mt-0 md:ml-8 w-60'>
+                        <button onClick={() => handleDownloadResume()} className='btn gap-2 text-secondary capitalize mt-8 md:mt-0 md:ml-8 w-60'>
                             Download My Resume
                             <FontAwesomeIcon icon={faDownload} />
                         </button>

@@ -1,21 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClipboardList, faDownload } from '@fortawesome/free-solid-svg-icons';
 import Typewriter from 'typewriter-effect';
 import ParticleBackground from '../ParticleBackground/ParticleBackground';
 
-const Hero = () => {
+const Hero = ({ currentSection }) => {
+    // integration of react hooks
+    const [showAnimation, setShowAnimation] = useState(false);
+
+    useEffect(() => {
+        if (currentSection === 'Home') {
+            setShowAnimation(true);
+        } else {
+            setShowAnimation(false);
+        }
+    }, [currentSection]);
 
     // rendering hero component here
     return (
-        <section className='h-screen relative'>
+        <section className='relative section'>
             <div className='w-full md:w-fit left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute z-10'>
                 <div className='flex flex-col items-center justify-center font-extralight'>
-                    <div className='animate-bottom-top-fade-in'>
+                    <div className={`${showAnimation ? 'animate-bottom-top-fade-in' : 'opacity-0 mt-[200px]'}`}>
                         <h3 className='text-base-100 text-xl md:text-5xl'>Hi There,</h3>
                         <h1 className='text-base-100 text-2xl md:text-6xl'>I am <span className='text-accent font-normal'>Milhan Joardar Aumi</span></h1>
                     </div>
-                    <div className='text-base-100 flex text-sm md:text-3xl mt-5 opacity-0 animate-fade-in'>
+                    <div className={`text-base-100 flex text-sm md:text-3xl mt-5 opacity-0 ${showAnimation ? 'animate-fade-in' : 'opacity-0'}`}>
                         <p className='mr-2'>I'm a</p>
                         <Typewriter
                             options={{
@@ -29,7 +39,7 @@ const Hero = () => {
                             }}
                         />
                     </div>
-                    <div className='mt-20 opacity-0 animate-fade-in'>
+                    <div className={`mt-20 opacity-0 ${showAnimation ? 'animate-fade-in' : 'opacity-0'}`}>
                         <button className='btn btn-accent text-secondary gap-2 capitalize w-60'>
                             Hire Me
                             <FontAwesomeIcon icon={faClipboardList} />

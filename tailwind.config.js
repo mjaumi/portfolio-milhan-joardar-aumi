@@ -15,11 +15,27 @@ module.exports = {
         'fade-in': {
           '0%': { opacity: 0 },
           ' 100%': { opacity: 1 },
+        },
+        'scroll': {
+          '0%': { top: 0 },
+          '25%': { top: '-36px' },
+          '50%': { top: '-72px' },
+          '75%': { top: '-108px' },
+          '100%': { top: '-144px' },
+        },
+        'scroll-sm': {
+          '0%': { top: 0 },
+          '25%': { top: '-20px' },
+          '50%': { top: '-40px' },
+          '75%': { top: '-60px' },
+          '100%': { top: '-80px' },
         }
       },
       animation: {
         'bottom-top-fade-in': 'bottom-top-fade-in 1s ease-in-out',
         'fade-in': 'fade-in 1s ease-in-out 1s forwards',
+        'scroll': 'scroll 5s ease-in-out 2s alternate infinite',
+        'scroll-sm': 'scroll-sm 5s ease-in-out 2s alternate infinite',
       },
     },
   },
@@ -28,11 +44,11 @@ module.exports = {
     themes: [
       {
         portfolioTheme: {
-          primary: '#02162b',
-          secondary: '#00293a',
-          accent: '#70ba65',
-          neutral: '#d6d8da',
-          'base-100': '#ffffff',
+          primary: '#111111',
+          secondary: '#020202',
+          accent: '#ffb402',
+          neutral: '#ffffff',
+          'base-100': '#252525',
         },
       },
     ],

@@ -1,16 +1,14 @@
-import { useState } from 'react';
 import './App.css';
-import FullPageWrapper from './components/FullPageWrapper/FullPageWrapper';
+import About from './components/About/About';
 import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
 
 function App() {
-  // integration of react hooks
-  const [nav, setNav] = useState('');
-
   return (
-    <main className='App bg-primary font-poppins' data-theme='portfolio-theme' >
-      <Header nav={nav} />
-      <FullPageWrapper setNav={setNav} />
+    <main className='App bg-primary min-h-screen font-poppins' data-theme='portfolio-theme' >
+      <Header />
+      <Hero />
+      <About />
     </main>
   );
 }

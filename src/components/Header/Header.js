@@ -1,12 +1,22 @@
+import { animated, useSpring } from '@react-spring/web';
 import React from 'react';
-import { Link } from 'react-scroll';
 
-const Header = () => {
+const Header = ({ hasSplashAnimFinished }) => {
+    // integration of react-spring hooks here
+    const headerProps = useSpring({
+        from: { top: '-500px' },
+        to: { top: '20px' },
+        config: {
+            tension: 150,
+            friction: 30,
+        },
+        pause: !hasSplashAnimFinished,
+    });
 
     // rendering header component here
     return (
-        <header className='sticky top-0 z-[99999] bg-secondary text-accent py-3 shadow-xl'>
-            <div className='navbar w-full md:w-4/5 mx-auto'>
+        <animated.header style={headerProps} className='fixed -top-[500px] z-[9999] bg-secondary text-accent px-4 shadow-2xl w-full md:w-4/5 mx-auto rounded-lg left-1/2 -translate-x-1/2'>
+            <div className='navbar'>
                 <div className='navbar-start'>
                     <div className='dropdown'>
                         <label tabIndex='0' className='btn btn-ghost lg:hidden'>
@@ -22,47 +32,47 @@ const Header = () => {
                         </ul>
                     </div>
                     <li className='btn btn-ghost normal-case text-xl'>
-                        <Link activeClass='active' to='home' spy={true} smooth={true} offset={50} duration={500}>
+                        <a href='#'>
                             <p className='text-base text-neutral font-extralight'>Find<span className='text-2xl font-bold text-accent'>Aumi</span></p>
-                        </Link>
+                        </a>
                     </li>
                 </div>
                 <div className='navbar-end hidden lg:flex'>
                     <ul className='menu menu-horizontal p-0'>
                         <li className='hover:opacity-40 duration-300'>
-                            <Link activeClass='active' to='about' spy={true} smooth={true} offset={50} duration={500}>
+                            <a href='#'>
                                 About
-                            </Link>
+                            </a>
                         </li>
                         <li className='hover:opacity-40 duration-300'>
-                            <Link activeClass='active' to='services' spy={true} smooth={true} offset={50} duration={500}>
+                            <a href='#'>
                                 Services
-                            </Link>
+                            </a>
                         </li>
                         <li className='hover:opacity-40 duration-300'>
-                            <Link activeClass='active' to='expertise' spy={true} smooth={true} offset={50} duration={500}>
+                            <a href='#'>
                                 Expertise
-                            </Link>
+                            </a>
                         </li>
                         <li className='hover:opacity-40 duration-300'>
-                            <Link activeClass='active' to='projects' spy={true} smooth={true} offset={50} duration={500}>
+                            <a href='#'>
                                 Projects
-                            </Link>
+                            </a>
                         </li>
                         <li className='hover:opacity-40 duration-300'>
-                            <Link activeClass='active' to='blogs' spy={true} smooth={true} offset={50} duration={500}>
+                            <a href='#'>
                                 Blogs
-                            </Link>
+                            </a>
                         </li>
                         <li className='hover:opacity-40 duration-300'>
-                            <Link activeClass='active' to='contact' spy={true} smooth={true} offset={50} duration={500}>
+                            <a href='#'>
                                 Contact
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </header>
+        </animated.header>
     );
 };
 

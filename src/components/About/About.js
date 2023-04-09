@@ -1,5 +1,6 @@
 import React from 'react';
 import me from '../../images/me.jpg';
+import SectionTitle from '../SectionTitle/SectionTitle';
 
 const About = () => {
 
@@ -7,14 +8,10 @@ const About = () => {
     return (
         <section>
             <div className='w-[95%] md:w-4/5 mx-auto'>
-                <div className='flex items-center'>
-                    <div className='w-1/3 h-px bg-accent'></div>
-                    <div className='relative w-3/4 md:w-1/4 mx-5'>
-                        <h3 className='font-light text-2xl md:text-4xl text-neutral uppercase'>About Me</h3>
-                        <h2 className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-black text-5xl md:text-6xl uppercase z-0 text-accent/20'>About</h2>
-                    </div>
-                    <div className='w-full h-px bg-accent'></div>
-                </div>
+                <SectionTitle
+                    mainTitleText={'About me'}
+                    bgTitleText={'about'}
+                />
                 <div className='py-20 flex flex-col md:flex-row items-center w-[95%] md:w-4/5 mx-auto'>
                     <div className='overflow-hidden rounded-3xl shadow-xl md:w-1/2'>
                         <img className='w-full' src={me} alt="me" />

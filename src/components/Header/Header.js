@@ -32,7 +32,7 @@ const Header = ({ hasSplashAnimFinished }) => {
                         </ul>
                     </div>
                     <li className='btn btn-ghost normal-case text-xl'>
-                        <a href='#'>
+                        <a href='#home'>
                             <p className='text-base text-neutral font-extralight'>Find<span className='text-2xl font-bold text-accent'>Aumi</span></p>
                         </a>
                     </li>
@@ -40,32 +40,37 @@ const Header = ({ hasSplashAnimFinished }) => {
                 <div className='navbar-end hidden lg:flex'>
                     <ul className='menu menu-horizontal p-0'>
                         <li className='hover:opacity-40 duration-300'>
-                            <a href='#'>
+                            <a href='#home'>
                                 About
                             </a>
                         </li>
                         <li className='hover:opacity-40 duration-300'>
-                            <a href='#'>
+                            <a href='#home'>
+                                Experiences
+                            </a>
+                        </li>
+                        <li className='hover:opacity-40 duration-300'>
+                            <a href='#home'>
                                 Services
                             </a>
                         </li>
                         <li className='hover:opacity-40 duration-300'>
-                            <a href='#'>
+                            <a href='#home'>
                                 Expertise
                             </a>
                         </li>
                         <li className='hover:opacity-40 duration-300'>
-                            <a href='#'>
+                            <a href='#home'>
                                 Projects
                             </a>
                         </li>
                         <li className='hover:opacity-40 duration-300'>
-                            <a href='#'>
+                            <a href='#home'>
                                 Blogs
                             </a>
                         </li>
                         <li className='hover:opacity-40 duration-300'>
-                            <a href='#'>
+                            <a href='#home'>
                                 Contact
                             </a>
                         </li>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClipboardList, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { BsClipboardCheckFill } from 'react-icons/bs';
+import { ImDownload } from 'react-icons/im';
 import { saveAs } from 'file-saver';
 import { animated, useSpring } from '@react-spring/web';
 
@@ -44,11 +44,11 @@ const Hero = ({ hasSplashAnimFinished }) => {
                     <div className={`mt-20`}>
                         <a href='#Contact' className='btn btn-neutral text-secondary gap-2 capitalize w-60'>
                             Hire Me
-                            <FontAwesomeIcon icon={faClipboardList} />
+                            <BsClipboardCheckFill />
                         </a>
                         <button onClick={() => handleDownloadResume()} className='btn gap-2 text-secondary btn-accent capitalize mt-8 md:mt-0 md:ml-8 w-60'>
                             Download My Resume
-                            <FontAwesomeIcon icon={faDownload} />
+                            <ImDownload />
                         </button>
                     </div>
                 </animated.div>

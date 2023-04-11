@@ -4,6 +4,7 @@ import About from './components/About/About';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import SplashScreen from './components/SplashScreen/SplashScreen';
+import Services from './components/Services/Services';
 
 function App() {
   // integration of react hooks here
@@ -18,6 +19,7 @@ function App() {
       <Header hasSplashAnimFinished={hasSplashAnimFinished} />
       <Hero hasSplashAnimFinished={hasSplashAnimFinished} />
       <About />
+      <Services />
     </main>
   );
 }

@@ -6,6 +6,8 @@ import Hero from './components/Hero/Hero';
 import SplashScreen from './components/SplashScreen/SplashScreen';
 import Services from './components/Services/Services';
 import Expertise from './components/Expertise/Expertise';
+import Blogs from './components/Blogs/Blogs';
+import Footer from './components/Footer/Footer';
 
 function App() {
   // integration of react hooks here
@@ -22,6 +24,8 @@ function App() {
       <About />
       <Services />
       <Expertise />
+      <Blogs />
+      <Footer />
     </main>
   );
 }

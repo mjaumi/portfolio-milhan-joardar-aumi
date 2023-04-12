@@ -37,7 +37,7 @@ const SectionTitle = ({ mainTitleText, bgTitleText }) => {
         <div ref={ref} className='flex items-center'>
             <animated.div style={lineProps} className='w-1/3 h-px bg-accent origin-right'></animated.div>
             <animated.div style={titleProps} className='relative mx-5'>
-                <h3 className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 font-light text-lg md:text-4xl text-neutral uppercase w-full'>{mainTitleText}</h3>
+                <h3 className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 font-extralight text-lg md:text-4xl text-neutral uppercase w-full'>{mainTitleText}</h3>
                 <h2 className='font-black text-3xl md:text-6xl uppercase text-accent/20'>{bgTitleText}</h2>
             </animated.div>
             <animated.div style={lineProps} className='w-full h-px bg-accent origin-left'></animated.div>

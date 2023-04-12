@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import SplashScreen from './components/SplashScreen/SplashScreen';
 import Services from './components/Services/Services';
+import Expertise from './components/Expertise/Expertise';
 
 function App() {
   // integration of react hooks here
@@ -20,6 +21,7 @@ function App() {
       <Hero hasSplashAnimFinished={hasSplashAnimFinished} />
       <About />
       <Services />
+      <Expertise />
     </main>
   );
 }

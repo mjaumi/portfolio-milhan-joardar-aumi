@@ -25,7 +25,7 @@ const Expertise = () => {
                 mainTitleText={'my skills'}
                 bgTitleText={'Expertise'}
             />
-            <animated.div ref={ref} style={animProps} className='py-20 grid grid-cols-3 md:grid-cols-10 gap-5 items-center w-[95%] md:w-4/5 mx-auto'>
+            <animated.div ref={ref} style={animProps} className='py-20 grid grid-cols-3 md:grid-cols-10 gap-5 w-[95%] md:w-4/5 mx-auto'>
                 {
                     skillSet?.map(skill => <ExpertiseItem
                         key={skill.id}

@@ -1,12 +1,21 @@
 import React from 'react';
+import SectionTitle from '../SectionTitle/SectionTitle';
+import ProjectItem from './ProjectItem';
 
-const Projects = ({ currentSection }) => {
+const Projects = () => {
 
     // rendering projects component here
     return (
-        <section className='relative border-t-4 border-accent/50 section'>
-            <div className='sticky z-30 bg-primary w-full h-full overflow-hidden'>
-                <h1 className={`absolute text-accent opacity-20 text-4xl md:text-8xl font-black -rotate-90 left-0 -translate-x-1/3 md:translate-x-0 duration-500 ${currentSection === 'Projects' ? 'top-[42%] md:top-[45%] -translate-y-1/2' : 'top-[150%]'}`}>Projects</h1>
+        <section className='w-[95%] md:w-4/5 mx-auto overflow-hidden mt-20'>
+            <SectionTitle
+                mainTitleText={'My Projects'}
+                bgTitleText={'Projects'}
+            />
+            <div className='py-20 grid grid-cols-3 gap-5 w-[95%] md:w-4/5 mx-auto'>
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
             </div>
         </section>
     );

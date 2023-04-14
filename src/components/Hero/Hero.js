@@ -3,6 +3,7 @@ import { BsClipboardCheckFill } from 'react-icons/bs';
 import { ImDownload } from 'react-icons/im';
 import { saveAs } from 'file-saver';
 import { animated, useSpring } from '@react-spring/web';
+import PortfolioButton from '../Buttons/PortfolioButton';
 
 const Hero = ({ hasSplashAnimFinished }) => {
     // integration of react-spring hooks here
@@ -41,15 +42,19 @@ const Hero = ({ hasSplashAnimFinished }) => {
                             </span>
                         </span>
                     </div>
-                    <div className={`mt-20`}>
-                        <a href='#Contact' className='btn btn-neutral text-secondary gap-2 capitalize w-60'>
-                            Hire Me
-                            <BsClipboardCheckFill />
+                    <div className='mt-20'>
+                        <a href='#Contact' className='relative btn btn-neutral text-primary capitalize w-60 border-2 border-neutral overflow-hidden after:w-full after:scale-x-0 after:h-full after:bg-primary after:absolute after:origin-left after:top-0 hover:after:scale-x-100 hover:text-neutral after:duration-300'>
+                            <div className='absolute flex z-10'>
+                                <BsClipboardCheckFill className='mr-2' />
+                                Hire Me
+                            </div>
                         </a>
-                        <button onClick={() => handleDownloadResume()} className='btn gap-2 text-secondary btn-accent capitalize mt-8 md:mt-0 md:ml-8 w-60'>
+                        <PortfolioButton
+                            onClickHandler={handleDownloadResume}
+                        >
+                            <ImDownload className='mr-2' />
                             Download My Resume
-                            <ImDownload />
-                        </button>
+                        </PortfolioButton>
                     </div>
                 </animated.div>
             </div>

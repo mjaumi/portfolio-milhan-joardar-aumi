@@ -8,6 +8,8 @@ import Services from './components/Services/Services';
 import Expertise from './components/Expertise/Expertise';
 import Blogs from './components/Blogs/Blogs';
 import Footer from './components/Footer/Footer';
+import Projects from './components/Projects/Projects';
+import Experiences from './components/Experiences/Experiences';
 
 function App() {
   // integration of react hooks here
@@ -22,8 +24,10 @@ function App() {
       <Header hasSplashAnimFinished={hasSplashAnimFinished} />
       <Hero hasSplashAnimFinished={hasSplashAnimFinished} />
       <About />
+      <Experiences />
       <Services />
       <Expertise />
+      <Projects />
       <Blogs />
       <Footer />
     </main>

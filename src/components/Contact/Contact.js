@@ -1,29 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { SiMinutemailer } from 'react-icons/si';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import PortfolioButton from '../Buttons/PortfolioButton';
 import { animated } from '@react-spring/web';
 import useDivFadeInAnimation from '../../hooks/useDivFadeInAnimation';
+import { TailSpin } from 'react-loading-icons'
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
     // integration of custom hooks hooks here
     const { ref, animProps } = useDivFadeInAnimation();
 
-    // handler function to handle message sending feature
-    const sendMessageHandler = e => {
-        e.preventDefault();
+    // integration of react-hook-form hooks here
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
-        emailjs.sendForm(
+    // integration of react hooks here
+    const [isMessageSending, setIsMessageSending] = useState(false);
+
+    // handler function to handle message sending feature
+    const sendMessageHandler = data => {
+
+        setIsMessageSending(true);
+
+        emailjs.send(
             process.env.REACT_APP_SERVICE_ID,
             process.env.REACT_APP_TEMPLATE_ID,
-            e.target,
+            data,
             process.env.REACT_APP_PUBLIC_KEY
         )
-            .then(res => console.log(res))
-            .catch(err => console.log(err));
+            .then(res => {
+                toast.success('Got Your Message. Will Contact With You Soon. Thank You!!');
+                setIsMessageSending(false);
+            })
+            .catch(err => {
+                toast.error('There Was An Error While Sending The Message!!');
+                setIsMessageSending(false);
+            });
 
-        e.target.reset();
+        reset({
+            fullName: '',
+            email: '',
+            subject: '',
+            message: '',
+        });
     }
 
     // rendering contact component here
@@ -35,34 +56,76 @@ const Contact = () => {
             />
             <animated.div ref={ref} style={animProps} className='py-20 w-[95%] md:w-3/5 mx-auto'>
                 <div className='w-full bg-secondary p-6 rounded-lg shadow-xl text-neutral'>
-                    <form onSubmit={sendMessageHandler}>
+                    <form onSubmit={handleSubmit(sendMessageHandler)}>
                         <div className='form-control w-full'>
                             <label className='label'>
                                 <span className='label-text text-neutral'>Full Name <span className='text-red-600'>*</span></span>
                             </label>
-                            <input type='text' name='fullName' placeholder='Your Full Name Here' className='input input-bordered input-accent bg-primary w-full' required />
+                            <input type='text' placeholder='Your Full Name Here' className={`input input-bordered bg-primary w-full ${errors.fullName ? 'border-red-600 focus:outline-red-600' : 'input-accent'}`} {...register('fullName', {
+                                required: {
+                                    value: true,
+                                    message: 'Name Required!!',
+                                }
+                            })} />
+                            <label className='label'>
+                                {errors.fullName?.type === 'required' && <span className='label-text-alt text-red-600'>{errors.fullName.message}</span>}
+                            </label>
                         </div>
                         <div className='form-control w-full mt-4'>
                             <label className='label'>
                                 <span className='label-text text-neutral'>Email Address <span className='text-red-600'>*</span></span>
                             </label>
-                            <input type='email' name='email' placeholder='Your Email Address Here' className='input input-bordered input-accent bg-primary w-full' required />
+                            <input type='email' placeholder='Your Email Address Here' className={`input input-bordered bg-primary w-full ${errors.email ? 'border-red-600 focus:outline-red-600' : 'input-accent'}`}  {...register('email', {
+                                required: {
+                                    value: true,
+                                    message: 'Email Required!!',
+                                },
+                                pattern: {
+                                    value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                    message: 'Invalid Email Address!!',
+                                }
+                            })} />
+                            <label className='label'>
+                                {errors.email?.type === 'required' && <span className='label-text-alt text-red-600'>{errors.email.message}</span>}
+                                {errors.email?.type === 'pattern' && <span className='label-text-alt text-red-600'>{errors.email.message}</span>}
+                            </label>
                         </div>
                         <div className='form-control w-full mt-4'>
                             <label className='label'>
                                 <span className='label-text text-neutral'>Subject <span className='text-red-600'>*</span></span>
                             </label>
-                            <input type='text' name='subject' placeholder='Your Subject Here' className='input input-bordered input-accent bg-primary w-full' required />
+                            <input type='text' placeholder='Your Subject Here' className={`input input-bordered bg-primary w-full ${errors.subject ? 'border-red-600 focus:outline-red-600' : 'input-accent'}`} {...register('subject', {
+                                required: {
+                                    value: true,
+                                    message: 'Subject Required!!',
+                                }
+                            })} />
+                            <label className='label'>
+                                {errors.subject?.type === 'required' && <span className='label-text-alt text-red-600'>{errors.subject.message}</span>}
+                            </label>
                         </div>
                         <div className='form-control mt-4'>
                             <label className='label'>
                                 <span className='label-text text-neutral'>Message <span className='text-red-600'>*</span></span>
                             </label>
-                            <textarea name='message' className='textarea textarea-bordered textarea-accent bg-primary h-24' placeholder='Type Your Message Here...' required></textarea>
+                            <textarea className={`textarea textarea-bordered bg-primary h-32 ${errors.message ? 'border-red-600 focus:outline-red-600' : 'textarea-accent'}`} placeholder='Type Your Message Here...' {...register('message', {
+                                required: {
+                                    value: true,
+                                    message: 'Message Required!!',
+                                }
+                            })} ></textarea>
+                            <label className='label'>
+                                {errors.message?.type === 'required' && <span className='label-text-alt text-red-600'>{errors.message.message}</span>}
+                            </label>
                         </div>
                         <div className='mt-6'>
-                            <PortfolioButton btnType={'submit'}>
-                                <SiMinutemailer className='mr-2 w-4 h-4' />
+                            <PortfolioButton btnType={'submit'} isLoading={isMessageSending}>
+                                {
+                                    !isMessageSending ?
+                                        <SiMinutemailer className='mr-2 w-4 h-4' />
+                                        :
+                                        <TailSpin stroke='#D4D4D4' width={'16px'} height={'16px'} className='mr-2' />
+                                }
                                 Send Message
                             </PortfolioButton>
                         </div>

@@ -11,6 +11,8 @@ import Footer from './components/Footer/Footer';
 import Projects from './components/Projects/Projects';
 import Experiences from './components/Experiences/Experiences';
 import Contact from './components/Contact/Contact';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   // integration of react hooks here
@@ -32,6 +34,7 @@ function App() {
       <Blogs />
       <Contact />
       <Footer hasSplashAnimFinished={hasSplashAnimFinished} />
+      <ToastContainer position='bottom-center' theme='dark' />
     </main>
   );
 }

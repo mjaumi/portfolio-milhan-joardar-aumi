@@ -3,6 +3,20 @@
 @tailwind utilities;
 
 /*-------------------------------
+    React Toastify Styling 
+---------------------------------*/
+.Toastify__toast-container--bottom-center {
+    width: 100vw !important;
+    display: flex;
+    justify-content: center;
+}
+.Toastify__toast-theme--dark {
+    text-align: center;
+    width: 550px;
+    background-color: #1b1a09 !important;
+}
+
+/*-------------------------------
     Scrollbar Styling 
 ---------------------------------*/
 ::-webkit-scrollbar {

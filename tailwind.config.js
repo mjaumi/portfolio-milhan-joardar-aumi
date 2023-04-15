@@ -38,6 +38,9 @@ module.exports = {
         'scroll': 'scroll 5s ease-in-out 2s alternate infinite',
         'scroll-sm': 'scroll-sm 5s ease-in-out 2s alternate infinite',
       },
+      gridTemplateRows: {
+        'project-card-grid': '40px 120px 1fr',
+      }
     },
   },
   plugins: [require('daisyui')],

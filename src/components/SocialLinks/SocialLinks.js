@@ -3,12 +3,23 @@ import { BsGithub } from 'react-icons/bs';
 import { SiLinkedin } from 'react-icons/si';
 import { ImFacebook2 } from 'react-icons/im';
 import { MdEmail } from 'react-icons/md';
+import { animated, useSpring } from '@react-spring/web';
 
-const SocialLinks = () => {
+const SocialLinks = ({ hasSplashAnimFinished }) => {
+    // integration of react-spring hooks here
+    const socialLinksProps = useSpring({
+        from: { right: '-200px' },
+        to: { right: '20px' },
+        config: {
+            tension: 150,
+            friction: 30,
+        },
+        pause: !hasSplashAnimFinished,
+    });
 
     // rendering social links component here
     return (
-        <div className=' md:fixed bottom-5 right-5'>
+        <animated.div style={socialLinksProps} className=' md:fixed bottom-5'>
             <div className='flex md:flex-col justify-center items-center mb-5 md:mb-0'>
                 <div className='hover:cursor-pointer hover:text-white duration-300'>
                     <a href='https://github.com/mjaumi' target='_blank' rel='noreferrer'>
@@ -31,7 +42,7 @@ const SocialLinks = () => {
                     </a>
                 </div>
             </div>
-        </div>
+        </animated.div>
     );
 };
 

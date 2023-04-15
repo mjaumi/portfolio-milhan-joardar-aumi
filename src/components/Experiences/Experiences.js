@@ -3,8 +3,13 @@ import { BsLinkedin, BsInstagram } from 'react-icons/bs';
 import { TbWorldWww } from 'react-icons/tb';
 import { FaFacebookSquare } from 'react-icons/fa';
 import SectionTitle from '../SectionTitle/SectionTitle';
+import { animated } from '@react-spring/web';
+import useDivFadeInAnimation from '../../hooks/useDivFadeInAnimation';
 
 const Experiences = () => {
+    // integration of custom hooks hooks here
+    const { ref, animProps } = useDivFadeInAnimation();
+
     // integration of react hooks here
     const [experiences, setExperiences] = useState([]);
     const [selectedExperience, setSelectedExperience] = useState(0);
@@ -14,7 +19,7 @@ const Experiences = () => {
     useEffect(() => {
         fetch('experiences.json')
             .then(res => res.json())
-            .then(data => setExperiences(data));
+            .then(data => setExperiences(data.reverse()));
     }, []);
 
     // checking if the device is mobile or not here
@@ -35,7 +40,7 @@ const Experiences = () => {
                 mainTitleText={'My Experiences'}
                 bgTitleText={'Experiences'}
             />
-            <div className='py-20 w-[95%] md:w-4/5 mx-auto flex flex-col md:flex-row'>
+            <animated.div ref={ref} style={animProps} className='py-20 w-[95%] md:w-4/5 mx-auto flex flex-col md:flex-row'>
                 <div className='w-full md:w-1/5 overflow-x-auto md:overflow-x-hidden overflow-y-hidden'>
                     <div style={{ width: `${(isMobile && experiences.length > 2) ? '700px' : '100%'}` }} className='relative h-full flex md:block border-b-2 md:border-b-0 md:border-r-2 border-base-100'>
                         {
@@ -100,7 +105,7 @@ const Experiences = () => {
                         }
                     </div>
                 </div>
-            </div>
+            </animated.div>
         </section>
     );
 };

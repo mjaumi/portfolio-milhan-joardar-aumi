@@ -29,7 +29,7 @@ function App() {
       <Expertise />
       <Projects />
       <Blogs />
-      <Footer />
+      <Footer hasSplashAnimFinished={hasSplashAnimFinished} />
     </main>
   );
 }

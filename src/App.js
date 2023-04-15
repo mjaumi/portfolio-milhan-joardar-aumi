@@ -10,6 +10,7 @@ import Blogs from './components/Blogs/Blogs';
 import Footer from './components/Footer/Footer';
 import Projects from './components/Projects/Projects';
 import Experiences from './components/Experiences/Experiences';
+import Contact from './components/Contact/Contact';
 
 function App() {
   // integration of react hooks here
@@ -29,6 +30,7 @@ function App() {
       <Expertise />
       <Projects />
       <Blogs />
+      <Contact />
       <Footer hasSplashAnimFinished={hasSplashAnimFinished} />
     </main>
   );

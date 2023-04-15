@@ -10,6 +10,15 @@
     },
     {
         "id": 2,
+        "title": "Task Manager",
+        "thumbnail": "https://i.ibb.co/X4zDzVv/task-manager.png",
+        "description": "A task manager web application where user can add, edit or delete tasks and can manage them accordingly. Here user can also search tasks from the search box.",
+        "tags": ["React", "RTK Query", "Redux Toolkit","React Redux", "Tailwind CSS", "JSON Server", "React Router"],
+        "livePreviewUrl": "https://lws-task-manager-mjaumi.netlify.app",
+        "githubClientUrl": "https://github.com/mjaumi/lws-09-task-manager"
+    },
+    {
+        "id": 2,
         "title": "Cars Arena",
         "thumbnail": "https://i.ibb.co/r7x84CF/cars-arena.png",
         "description": "A car spare parts manufacturer company website where user can buy spare parts in retail price. Here admin can add new product and can confirm someone's order after the payment is confirmed.",

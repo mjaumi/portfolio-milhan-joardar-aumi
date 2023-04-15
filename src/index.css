@@ -20,3 +20,13 @@
     border-radius: 8px;
     background: #252525;
 }
+
+::-webkit-scrollbar:horizontal {
+    height: 0;
+    width: 0;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    display: none;
+}

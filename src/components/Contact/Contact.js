@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { SiMinutemailer } from 'react-icons/si';
-import SectionTitle from '../SectionTitle/SectionTitle';
 import PortfolioButton from '../Buttons/PortfolioButton';
 import { animated } from '@react-spring/web';
 import useDivFadeInAnimation from '../../hooks/useDivFadeInAnimation';
 import { TailSpin } from 'react-loading-icons'
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+import Layout from '../../Layout/Layout';
 
 const Contact = () => {
     // integration of custom hooks hooks here
@@ -49,12 +49,8 @@ const Contact = () => {
 
     // rendering contact component here
     return (
-        <section className='w-[95%] md:w-4/5 mx-auto overflow-hidden mt-20'>
-            <SectionTitle
-                mainTitleText={'Get in Touch'}
-                bgTitleText={'Contact'}
-            />
-            <animated.div ref={ref} style={animProps} className='py-20 w-[95%] md:w-3/5 mx-auto'>
+        <Layout mainTitleText={'Get in Touch'} bgTitleText={'Contact'}>
+            <animated.div ref={ref} style={animProps} className='py-20 w-[95%] xl:w-4/5 2xl:w-3/5 mx-auto'>
                 <div className='w-full bg-secondary p-6 rounded-lg shadow-xl text-neutral'>
                     <form onSubmit={handleSubmit(sendMessageHandler)}>
                         <div className='form-control w-full'>
@@ -132,7 +128,7 @@ const Contact = () => {
                     </form>
                 </div>
             </animated.div>
-        </section>
+        </Layout>
     );
 };
 

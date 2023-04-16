@@ -18,7 +18,7 @@ const ProjectItem = ({ project }) => {
             <div className='mt-4 grid grid-rows-project-card-grid'>
                 <h3 className='text-xl text-accent'>{title}</h3>
                 <p className='my-3 text-sm text-white'>{description}</p>
-                <div className='mt-4 grid grid-cols-2 md:grid-cols-3 gap-2'>
+                <div className='mt-4 grid grid-cols-2 2xl:grid-cols-3 gap-2'>
                     {
                         tags.map(tag => <ProjectItemTag
                             key={tag}

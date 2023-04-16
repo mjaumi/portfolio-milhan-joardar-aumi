@@ -36,7 +36,7 @@ const SplashScreen = ({ hasSplashAnimFinished, setHasSplashAnimFinished }) => {
 
     // rendering the splash screen component here
     return (
-        <animated.section style={splashProps} className='absolute bg-accent w-full h-screen flex justify-center items-center overflow-hidden z-[99999] origin-top'>
+        <animated.section style={splashProps} className='fixed top-0 left-0 bg-accent w-full h-screen flex justify-center items-center overflow-hidden z-[99999] origin-top'>
             <animated.div style={pulseTextProps} className='border-2 border-primary p-4 rounded-lg'>
                 <h1 className='font-extralight text-5xl text-primary'>Find Aumi</h1>
             </animated.div>

@@ -27,8 +27,8 @@ const Hero = ({ hasSplashAnimFinished }) => {
             <div className='w-full h-full flex justify-center items-center'>
                 <animated.div style={heroAnimProps} className='flex flex-col items-center justify-center font-extralight'>
                     <div>
-                        <h3 className='text-neutral text-xl md:text-5xl'>Hi There,</h3>
-                        <h1 className='text-neutral text-2xl md:text-6xl'>I am <span className='text-accent font-normal'>Milhan Joardar Aumi</span></h1>
+                        <h3 className='text-neutral text-xl md:text-3xl xl:text-5xl'>Hi There,</h3>
+                        <h1 className='text-neutral text-2xl md:text-4xl xl:text-6xl'>I am <span className='text-accent font-normal'>Milhan Joardar Aumi</span></h1>
                     </div>
                     <div className={`text-primary flex justify-center w-[210px] md:w-[420px] text-center text-sm md:text-3xl mt-5`}>
                         <p className='mr-2 text-neutral'>I'm a</p>

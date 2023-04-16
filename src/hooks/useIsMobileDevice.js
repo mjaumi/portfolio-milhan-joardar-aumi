@@ -8,7 +8,7 @@ const useIsMobileDevice = () => {
     // checking if the device is mobile or not here
     useEffect(() => {
         window.addEventListener('resize', () => {
-            if (window.innerWidth < 768) {
+            if (window.innerWidth < 1280) {
                 setIsMobile(true);
             } else {
                 setIsMobile(false);

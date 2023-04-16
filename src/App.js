@@ -19,7 +19,7 @@ function App() {
   const [hasSplashAnimFinished, setHasSplashAnimFinished] = useState(false);
 
   return (
-    <main className='App bg-primary min-h-screen font-poppins' data-theme='portfolio-theme' >
+    <main className='App bg-primary font-poppins' data-theme='portfolio-theme' >
       <SplashScreen
         hasSplashAnimFinished={hasSplashAnimFinished}
         setHasSplashAnimFinished={setHasSplashAnimFinished}

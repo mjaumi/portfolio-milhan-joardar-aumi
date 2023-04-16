@@ -5,6 +5,7 @@ import { FaFacebookSquare } from 'react-icons/fa';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import { animated } from '@react-spring/web';
 import useDivFadeInAnimation from '../../hooks/useDivFadeInAnimation';
+import useIsMobileDevice from '../../hooks/useIsMobileDevice';
 
 const Experiences = () => {
     // integration of custom hooks hooks here
@@ -13,24 +14,15 @@ const Experiences = () => {
     // integration of react hooks here
     const [experiences, setExperiences] = useState([]);
     const [selectedExperience, setSelectedExperience] = useState(0);
-    const [isMobile, setIsMobile] = useState(false);
+
+    // integration of custom hooks here
+    const isMobile = useIsMobileDevice();
 
     // fetching the experiences from a json file here
     useEffect(() => {
         fetch('experiences.json')
             .then(res => res.json())
             .then(data => setExperiences(data.reverse()));
-    }, []);
-
-    // checking if the device is mobile or not here
-    useEffect(() => {
-        window.addEventListener('resize', () => {
-            if (window.innerWidth < 768) {
-                setIsMobile(true);
-            } else {
-                setIsMobile(false);
-            }
-        }, false);
     }, []);
 
     // rendering experiences component here

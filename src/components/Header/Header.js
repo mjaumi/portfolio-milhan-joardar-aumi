@@ -1,11 +1,15 @@
 import { animated, useSpring } from '@react-spring/web';
 import React from 'react';
+import useIsMobileDevice from '../../hooks/useIsMobileDevice';
 
 const Header = ({ hasSplashAnimFinished }) => {
+    // integration of custom hooks here
+    const isMobile = useIsMobileDevice();
+
     // integration of react-spring hooks here
     const headerProps = useSpring({
         from: { top: '-500px' },
-        to: { top: '20px' },
+        to: { top: isMobile ? '0px' : '20px' },
         config: {
             tension: 150,
             friction: 30,

@@ -21,7 +21,7 @@ const Projects = ({ setCurrentSection }) => {
     // rendering projects component here
     return (
         <SectionLayout id={'projects'} mainTitleText={'My Projects'} bgTitleText={'Projects'}>
-            <InView as='div' threshold={0.4} onChange={inView => inView && setCurrentSection('Projects')}>
+            <InView as='div' threshold={0.2} onChange={inView => inView && setCurrentSection('Projects')}>
                 <animated.div ref={ref} style={animProps} className='py-20 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 w-[95%] xl:w-4/5 mx-auto'>
                     {
                         projects.map(project => <ProjectItem

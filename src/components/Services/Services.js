@@ -14,7 +14,7 @@ const Services = ({ setCurrentSection }) => {
     // rendering services component here
     return (
         <SectionLayout id={'services'} mainTitleText={'My Services'} bgTitleText={'Services'}>
-            <InView as='div' threshold={1.0} onChange={inView => inView && setCurrentSection('Services')}>
+            <InView as='div' threshold={0.9} onChange={inView => inView && setCurrentSection('Services')}>
                 <animated.div ref={ref} style={animProps} className='py-20 grid grid-cols-1 md:grid-cols-3 gap-5 xl:gap-10 items-center w-[95%] xl:w-4/5 mx-auto'>
                     <div className='bg-secondary p-6 rounded-lg shadow-xl flex flex-col justify-center items-center hover:cursor-pointer hover:scale-110 duration-300'>
                         <FaLaptopCode className='h-20 w-20 xl:h-32 xl:w-32 text-accent mb-3' />

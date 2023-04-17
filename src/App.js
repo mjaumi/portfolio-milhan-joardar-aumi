@@ -17,6 +17,7 @@ import { ToastContainer } from 'react-toastify';
 function App() {
   // integration of react hooks here
   const [hasSplashAnimFinished, setHasSplashAnimFinished] = useState(false);
+  const [currentSection, setCurrentSection] = useState('');
 
   return (
     <main className='App bg-primary font-poppins' data-theme='portfolio-theme' >
@@ -24,15 +25,21 @@ function App() {
         hasSplashAnimFinished={hasSplashAnimFinished}
         setHasSplashAnimFinished={setHasSplashAnimFinished}
       />
-      <Header hasSplashAnimFinished={hasSplashAnimFinished} />
-      <Hero hasSplashAnimFinished={hasSplashAnimFinished} />
-      <About />
-      <Experiences />
-      <Services />
-      <Expertise />
-      <Projects />
-      <Blogs />
-      <Contact />
+      <Header
+        currentSection={currentSection}
+        hasSplashAnimFinished={hasSplashAnimFinished}
+      />
+      <Hero
+        hasSplashAnimFinished={hasSplashAnimFinished}
+        setCurrentSection={setCurrentSection}
+      />
+      <About setCurrentSection={setCurrentSection} />
+      <Experiences setCurrentSection={setCurrentSection} />
+      <Services setCurrentSection={setCurrentSection} />
+      <Expertise setCurrentSection={setCurrentSection} />
+      <Projects setCurrentSection={setCurrentSection} />
+      <Blogs setCurrentSection={setCurrentSection} />
+      <Contact setCurrentSection={setCurrentSection} />
       <Footer hasSplashAnimFinished={hasSplashAnimFinished} />
       <ToastContainer position='bottom-center' theme='dark' />
     </main>

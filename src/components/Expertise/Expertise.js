@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import ExpertiseItem from './ExpertiseItem';
 import { animated } from '@react-spring/web';
 import useDivFadeInAnimation from '../../hooks/useDivFadeInAnimation';
-import Layout from '../../Layout/Layout';
+import SectionLayout from '../../Layout/SectionLayout';
+import { InView } from 'react-intersection-observer';
 
-const Expertise = () => {
+const Expertise = ({ setCurrentSection }) => {
     // integration of custom hooks hooks here
     const { ref, animProps } = useDivFadeInAnimation();
 
@@ -20,16 +21,18 @@ const Expertise = () => {
 
     // rendering expertise component here
     return (
-        <Layout mainTitleText={'my skills'} bgTitleText={'Expertise'}>
-            <animated.div ref={ref} style={animProps} className='py-20 grid grid-cols-3 md:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 gap-5 w-[95%] xl:w-4/5 mx-auto'>
-                {
-                    skillSet?.map(skill => <ExpertiseItem
-                        key={skill.id}
-                        skill={skill}
-                    />)
-                }
-            </animated.div>
-        </Layout>
+        <SectionLayout id={'expertise'} mainTitleText={'my skills'} bgTitleText={'Expertise'}>
+            <InView as='div' threshold={1.0} onChange={inView => inView && setCurrentSection('Expertise')}>
+                <animated.div ref={ref} style={animProps} className='py-20 grid grid-cols-3 md:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 gap-5 w-[95%] xl:w-4/5 mx-auto'>
+                    {
+                        skillSet?.map(skill => <ExpertiseItem
+                            key={skill.id}
+                            skill={skill}
+                        />)
+                    }
+                </animated.div>
+            </InView>
+        </SectionLayout>
     );
 };
 

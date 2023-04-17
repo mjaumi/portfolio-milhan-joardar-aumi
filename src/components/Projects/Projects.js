@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import ProjectItem from './ProjectItem';
 import { animated } from '@react-spring/web';
 import useDivFadeInAnimation from '../../hooks/useDivFadeInAnimation';
-import Layout from '../../Layout/Layout';
+import SectionLayout from '../../Layout/SectionLayout';
+import { InView } from 'react-intersection-observer';
 
-const Projects = () => {
+const Projects = ({ setCurrentSection }) => {
     // integration of custom hooks hooks here
     const { ref, animProps } = useDivFadeInAnimation();
 
@@ -19,16 +20,18 @@ const Projects = () => {
 
     // rendering projects component here
     return (
-        <Layout mainTitleText={'My Projects'} bgTitleText={'Projects'}>
-            <animated.div ref={ref} style={animProps} className='py-20 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 w-[95%] xl:w-4/5 mx-auto'>
-                {
-                    projects.map(project => <ProjectItem
-                        key={project.id}
-                        project={project}
-                    />)
-                }
-            </animated.div>
-        </Layout>
+        <SectionLayout id={'projects'} mainTitleText={'My Projects'} bgTitleText={'Projects'}>
+            <InView as='div' threshold={0.4} onChange={inView => inView && setCurrentSection('Projects')}>
+                <animated.div ref={ref} style={animProps} className='py-20 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 w-[95%] xl:w-4/5 mx-auto'>
+                    {
+                        projects.map(project => <ProjectItem
+                            key={project.id}
+                            project={project}
+                        />)
+                    }
+                </animated.div>
+            </InView>
+        </SectionLayout>
     );
 };
 

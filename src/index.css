@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 /*-------------------------------
+    For Smooth Scrolling 
+---------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*-------------------------------
     React Toastify Styling 
 ---------------------------------*/
 .Toastify__toast-container--bottom-center {

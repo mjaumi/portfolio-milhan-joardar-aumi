@@ -1,11 +1,11 @@
 import React from 'react';
 import SectionTitle from '../components/SectionTitle/SectionTitle';
 
-const Layout = ({ children, bgTitleText, mainTitleText }) => {
+const SectionLayout = ({ id, children, bgTitleText, mainTitleText }) => {
 
     // rendering the web application's section layout here
     return (
-        <section className='w-[95%] xl:w-4/5 mx-auto overflow-hidden mt-20'>
+        <section id={id} className='w-[95%] xl:w-4/5 mx-auto overflow-hidden pt-24'>
             <SectionTitle
                 mainTitleText={mainTitleText}
                 bgTitleText={bgTitleText}
@@ -15,4 +15,4 @@ const Layout = ({ children, bgTitleText, mainTitleText }) => {
     );
 };
 
-export default Layout;
+export default SectionLayout;

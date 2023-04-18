@@ -20,7 +20,7 @@ const PortfolioDrawerButton = ({ currentSection, isDrawerVisible, setIsDrawerVis
 
     // rendering portfolio drawer button component here
     return (
-        <button onClick={() => scrollToSectionHandler(sectionId)} className={`block py-3 w-full hover:cursor-pointer hover:opacity-40 ${currentSection === children && 'bg-accent text-secondary'}`}>
+        <button onClick={() => scrollToSectionHandler(sectionId)} className={`block py-3 w-full hover:cursor-pointer hover:opacity-40 ${currentSection === children && 'bg-accent text-secondary !cursor-pointer'}`}>
             {children}
         </button>
     );

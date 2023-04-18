@@ -13,6 +13,7 @@ import Experiences from './components/Experiences/Experiences';
 import Contact from './components/Contact/Contact';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import AnimatedCursor from 'react-animated-cursor';
 
 function App() {
   // integration of react hooks here
@@ -42,6 +43,33 @@ function App() {
       <Contact setCurrentSection={setCurrentSection} />
       <Footer hasSplashAnimFinished={hasSplashAnimFinished} />
       <ToastContainer position='bottom-center' theme='dark' />
+      <AnimatedCursor
+        innerSize={8}
+        outerSize={50}
+        color='255, 180, 2'
+        outerAlpha={0.2}
+        innerScale={0.7}
+        outerScale={1.2}
+        clickables={[
+          'a',
+          'input[type="text"]',
+          'input[type="email"]',
+          'input[type="number"]',
+          'input[type="submit"]',
+          'input[type="image"]',
+          'label[for]',
+          'select',
+          'textarea',
+          'button',
+          '.link'
+        ]}
+        innerStyle={{
+          zIndex: 999999
+        }}
+        outerStyle={{
+          zIndex: 999999
+        }}
+      />
     </main>
   );
 }

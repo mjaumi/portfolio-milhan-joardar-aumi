@@ -9,14 +9,6 @@ module.exports = {
         'poppins': ["'Poppins'", 'sans-serif'],
       },
       keyframes: {
-        'bottom-top-fade-in': {
-          '0%': { 'margin-top': '200px', opacity: 0 },
-          ' 100%': { 'margin-top': '0px', opacity: 1 },
-        },
-        'fade-in': {
-          '0%': { opacity: 0 },
-          ' 100%': { opacity: 1 },
-        },
         'scroll': {
           '0%': { top: 0 },
           '25%': { top: '-36px' },
@@ -33,8 +25,6 @@ module.exports = {
         }
       },
       animation: {
-        'bottom-top-fade-in': 'bottom-top-fade-in 1s ease-in-out',
-        'fade-in': 'fade-in 1s ease-in-out 1s forwards',
         'scroll': 'scroll 5s ease-in-out 2s alternate infinite',
         'scroll-sm': 'scroll-sm 5s ease-in-out 2s alternate infinite',
       },

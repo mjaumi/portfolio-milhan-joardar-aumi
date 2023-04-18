@@ -16,7 +16,7 @@ const PortfolioNavbarButton = ({ sectionId, children }) => {
     // rendering navbar button component here
     return (
         <li className='list-none hover:opacity-40 duration-300'>
-            <button onClick={() => scrollToSectionHandler(sectionId)} className='w-[120px] !rounded-none hover:bg-transparent focus:bg-transparent'>
+            <button onClick={() => scrollToSectionHandler(sectionId)} className='w-[120px] !rounded-none hover:bg-transparent focus:bg-transparent !cursor-pointer'>
                 {children}
             </button>
         </li>

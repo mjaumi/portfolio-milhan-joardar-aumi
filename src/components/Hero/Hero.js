@@ -23,6 +23,18 @@ const Hero = ({ hasSplashAnimFinished, setCurrentSection }) => {
         saveAs('https://drive.google.com/file/d/1P_qB7d6S5uvNK0Alas7Uz8O43bG6jKVz/view?usp=sharing', 'Resume of Milhan Joardar Aumi.pdf');
     }
 
+    // handler function to handle scroll to contact section
+    const scrollToContactHandler = () => {
+        const section = document.getElementById('contact');
+
+        if (section) {
+            section.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }
+
     // rendering hero component here
     return (
         <section id='home' className='h-screen mb-20 overflow-hidden'>
@@ -46,14 +58,16 @@ const Hero = ({ hasSplashAnimFinished, setCurrentSection }) => {
                             </span>
                         </div>
                         <div className='mt-20'>
-                            <a href='#Contact' className='relative btn btn-neutral text-primary capitalize w-60 border-2 border-neutral overflow-hidden after:w-full after:scale-x-0 after:h-full after:bg-primary after:absolute after:origin-left after:top-0 hover:after:scale-x-100 hover:text-neutral after:duration-300'>
-                                <div className='absolute flex z-10'>
-                                    <BsClipboardCheckFill className='mr-2' />
-                                    Hire Me
-                                </div>
-                            </a>
+                            <PortfolioButton
+                                onClickHandler={scrollToContactHandler}
+                                additionalClassNames={'btn-neutral text-primary hover:text-neutral border-neutral'}
+                            >
+                                <BsClipboardCheckFill className='mr-2' />
+                                Hire Me
+                            </PortfolioButton>
                             <PortfolioButton
                                 onClickHandler={downloadResumeHandler}
+                                additionalClassNames={'text-primary btn-accent hover:text-accent border-accent'}
                             >
                                 <ImDownload className='mr-2' />
                                 Download My Resume

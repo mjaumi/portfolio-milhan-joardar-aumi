@@ -117,7 +117,11 @@ const Contact = ({ setCurrentSection }) => {
                                 </label>
                             </div>
                             <div className='mt-6'>
-                                <PortfolioButton btnType={'submit'} isLoading={isMessageSending}>
+                                <PortfolioButton
+                                    btnType={'submit'}
+                                    isLoading={isMessageSending}
+                                    additionalClassNames={'text-primary btn-accent hover:text-accent border-accent'}
+                                >
                                     {
                                         !isMessageSending ?
                                             <SiMinutemailer className='mr-2 w-4 h-4' />

@@ -51,7 +51,7 @@ const Contact = ({ setCurrentSection }) => {
     // rendering contact component here
     return (
         <SectionLayout id={'contact'} mainTitleText={'Get in Touch'} bgTitleText={'Contact'}>
-            <InView as='div' threshold={0.6} onChange={inView => inView && setCurrentSection('Contact')}>
+            <InView as='div' threshold={0.5} onChange={inView => inView && setCurrentSection('Contact')}>
                 <animated.div ref={ref} style={animProps} className='py-20 w-[95%] xl:w-4/5 2xl:w-3/5 mx-auto'>
                     <div className='w-full bg-secondary p-6 rounded-lg shadow-xl text-neutral'>
                         <form onSubmit={handleSubmit(sendMessageHandler)}>
@@ -59,7 +59,7 @@ const Contact = ({ setCurrentSection }) => {
                                 <label className='label'>
                                     <span className='label-text text-neutral'>Full Name <span className='text-red-600'>*</span></span>
                                 </label>
-                                <input type='text' placeholder='Your Full Name Here' className={`input input-bordered bg-primary w-full ${errors.fullName ? 'border-red-600 focus:outline-red-600' : 'input-accent'}`} {...register('fullName', {
+                                <input type='text' placeholder='Your Full Name Here' className={`input input-bordered bg-primary !cursor-pointer w-full ${errors.fullName ? 'border-red-600 focus:outline-red-600' : 'input-accent'}`} {...register('fullName', {
                                     required: {
                                         value: true,
                                         message: 'Name Required!!',
@@ -73,7 +73,7 @@ const Contact = ({ setCurrentSection }) => {
                                 <label className='label'>
                                     <span className='label-text text-neutral'>Email Address <span className='text-red-600'>*</span></span>
                                 </label>
-                                <input type='email' placeholder='Your Email Address Here' className={`input input-bordered bg-primary w-full ${errors.email ? 'border-red-600 focus:outline-red-600' : 'input-accent'}`}  {...register('email', {
+                                <input type='email' placeholder='Your Email Address Here' className={`input input-bordered bg-primary !cursor-pointer w-full ${errors.email ? 'border-red-600 focus:outline-red-600' : 'input-accent'}`}  {...register('email', {
                                     required: {
                                         value: true,
                                         message: 'Email Required!!',
@@ -92,7 +92,7 @@ const Contact = ({ setCurrentSection }) => {
                                 <label className='label'>
                                     <span className='label-text text-neutral'>Subject <span className='text-red-600'>*</span></span>
                                 </label>
-                                <input type='text' placeholder='Your Subject Here' className={`input input-bordered bg-primary w-full ${errors.subject ? 'border-red-600 focus:outline-red-600' : 'input-accent'}`} {...register('subject', {
+                                <input type='text' placeholder='Your Subject Here' className={`input input-bordered bg-primary !cursor-pointer w-full ${errors.subject ? 'border-red-600 focus:outline-red-600' : 'input-accent'}`} {...register('subject', {
                                     required: {
                                         value: true,
                                         message: 'Subject Required!!',
@@ -106,7 +106,7 @@ const Contact = ({ setCurrentSection }) => {
                                 <label className='label'>
                                     <span className='label-text text-neutral'>Message <span className='text-red-600'>*</span></span>
                                 </label>
-                                <textarea className={`textarea textarea-bordered bg-primary h-32 ${errors.message ? 'border-red-600 focus:outline-red-600' : 'textarea-accent'}`} placeholder='Type Your Message Here...' {...register('message', {
+                                <textarea className={`textarea textarea-bordered bg-primary !cursor-pointer h-32 ${errors.message ? 'border-red-600 focus:outline-red-600' : 'textarea-accent'}`} placeholder='Type Your Message Here...' {...register('message', {
                                     required: {
                                         value: true,
                                         message: 'Message Required!!',

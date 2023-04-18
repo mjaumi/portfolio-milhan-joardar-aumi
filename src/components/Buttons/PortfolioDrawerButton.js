@@ -6,7 +6,6 @@ const PortfolioDrawerButton = ({ currentSection, isDrawerVisible, setIsDrawerVis
         const section = document.getElementById(sectionId);
 
         if (section) {
-            console.log(section);
             section.scrollIntoView({
                 behavior: 'smooth',
                 block: (sectionId === 'projects' || sectionId === 'contact') ? 'start' : 'center',

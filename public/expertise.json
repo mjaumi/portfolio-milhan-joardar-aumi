@@ -36,118 +36,167 @@
     },
     {
         "id": 6,
+        "skillName": "TypeScript",
+        "icon": "SiTypescript",
+        "color": "#3178C6",
+        "url": "https://www.typescriptlang.org"
+    },
+    {
+        "id": 7,
         "skillName": "JavaScript",
         "icon": "SiJavascript",
         "color": "#F7DF1E",
         "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
     },
     {
-        "id": 7,
+        "id": 8,
+        "skillName": "Next.js",
+        "icon": "SiNextdotjs",
+        "color": "#FFFFFF",
+        "url": "https://nextjs.org"
+    },
+    {
+        "id": 9,
         "skillName": "React",
         "icon": "FaReact",
         "color": "#61DBFB",
         "url": "https://react.dev"
     },
     {
-        "id": 8,
+        "id": 10,
         "skillName": "React Router",
         "icon": "SiReactrouter",
         "color": "#D0051B",
         "url": "https://reactrouter.com/en/main"
     },
     {
-        "id": 9,
+        "id": 11,
         "skillName": "Redux",
         "icon": "TbBrandRedux",
         "color": "#774BB9",
         "url": "https://redux.js.org"
     },
     {
-        "id": 10,
+        "id": 12,
         "skillName": "Node.js",
         "icon": "IoLogoNodejs",
         "color": "#5B994F",
         "url": "https://nodejs.org/en"
     },
     {
-        "id": 11,
+        "id": 13,
         "skillName": "Express.js",
         "icon": "SiExpress",
         "color": "#515151",
         "url": "https://expressjs.com"
     },
     {
-        "id": 12,
+        "id": 14,
         "skillName": "MongoDB",
         "icon": "SiMongodb",
         "color": "#12924F",
         "url": "https://www.mongodb.com"
     },
     {
-        "id": 13,
+        "id": 15,
+        "skillName": "React Spring",
+        "icon": "SiSpringCreators",
+        "color": "#FFFFFF",
+        "url": "https://www.react-spring.dev"
+    },
+    {
+        "id": 16,
+        "skillName": "Motion",
+        "icon": "TbBrandFramerMotion",
+        "color": "#CE36DB",
+        "url": "https://www.framer.com/motion/"
+    },
+    {
+        "id": 17,
         "skillName": "Axios",
         "icon": "SiAxios",
         "color": "#5B29E4",
         "url": "https://axios-http.com/docs/intro"
     },
     {
-        "id": 14,
+        "id": 18,
         "skillName": "JWT",
         "icon": "SiJsonwebtokens",
         "color": "#FB025B",
         "url": "https://jwt.io"
     },
     {
-        "id": 15,
+        "id": 19,
         "skillName": "Vercel",
         "icon": "SiVercel",
         "color": "#FFFFFF",
         "url": "https://vercel.com"
     },
     {
-        "id": 16,
+        "id": 20,
         "skillName": "Heroku",
         "icon": "SiHeroku",
         "color": "#430098",
         "url": "https://www.heroku.com"
     },
     {
-        "id": 17,
+        "id": 21,
         "skillName": "Firebase",
         "icon": "SiFirebase",
         "color": "#F88B21",
         "url": "https://firebase.google.com"
     },
     {
-        "id": 18,
+        "id": 22,
+        "skillName": "Socket.IO",
+        "icon": "SiSocketdotio",
+        "color": "#FFFFFF",
+        "url": "https://socket.io"
+    },
+    {
+        "id": 23,
         "skillName": "Git",
         "icon": "BsGit",
         "color": "#F64D27",
         "url": "https://git-scm.com"
     },
     {
-        "id": 19,
+        "id": 24,
         "skillName": "GitHub",
         "icon": "BsGithub",
         "color": "#BABBBD",
         "url": "https://github.com"
     },
     {
-        "id": 20,
+        "id": 25,
+        "skillName": "VS Code",
+        "icon": "TbBrandVscode",
+        "color": "#317AC6",
+        "url": "https://code.visualstudio.com"
+    },
+    {
+        "id": 26,
+        "skillName": "NPM",
+        "icon": "TbBrandNpm",
+        "color": "#CC3534",
+        "url": "https://www.npmjs.com"
+    },
+    {
+        "id": 27,
         "skillName": "Figma",
         "icon": "IoLogoFigma",
         "color": "#1ABCFE",
         "url": "https://www.figma.com"
     },
     {
-        "id": 21,
+        "id": 28,
         "skillName": "Photoshop",
         "icon": "SiAdobephotoshop",
         "color": "#2DAAFF",
         "url": "https://en.wikipedia.org/wiki/Adobe_Photoshop"
     },
     {
-        "id": 22,
+        "id": 29,
         "skillName": "Illustrator",
         "icon": "SiAdobeillustrator",
         "color": "#FF9C00",

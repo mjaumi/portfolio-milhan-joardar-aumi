@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ProjectItem from './ProjectItem';
 import { animated } from '@react-spring/web';
+import { BsArrowRight } from 'react-icons/bs';
 import useDivFadeInAnimation from '../../hooks/useDivFadeInAnimation';
 import SectionLayout from '../../Layout/SectionLayout';
 import { InView } from 'react-intersection-observer';
@@ -22,13 +23,21 @@ const Projects = ({ setCurrentSection }) => {
     return (
         <SectionLayout id={'projects'} mainTitleText={'My Projects'} bgTitleText={'Projects'}>
             <InView as='div' threshold={0.2} onChange={inView => inView && setCurrentSection('Projects')}>
-                <animated.div ref={ref} style={animProps} className='py-20 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 w-[95%] xl:w-4/5 mx-auto'>
-                    {
-                        projects.map(project => <ProjectItem
-                            key={project.id}
-                            project={project}
-                        />)
-                    }
+                <animated.div ref={ref} style={animProps} className='w-[95%] xl:w-4/5 mx-auto py-20'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5'>
+                        {
+                            projects.map(project => <ProjectItem
+                                key={project.id}
+                                project={project}
+                            />)
+                        }
+                    </div>
+                    <div className='flex justify-center mt-16'>
+                        <a href='https://github.com/mjaumi?tab=repositories' className='group flex items-center text-accent text-lg lg:w-52' target='_blank' rel='noreferrer'>
+                            View All Projects
+                            <BsArrowRight className='ml-2 h-5 w-5 group-hover:ml-8 duration-300' />
+                        </a>
+                    </div>
                 </animated.div>
             </InView>
         </SectionLayout>

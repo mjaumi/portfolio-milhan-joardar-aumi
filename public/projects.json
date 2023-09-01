@@ -1,21 +1,21 @@
 [
     {
         "id": 1,
-        "title": "Learning Portal",
-        "thumbnail": "https://i.ibb.co/zGLYQz0/learning-portal.png",
-        "description": "An ed tech platform where admin can add, remove or edit videos, assignments and quizzes and students can watch videos, attempt quizzes and submit assignments and can see the leaderboard.",
-        "tags": ["React", "RTK Query", "Redux Toolkit","React Redux", "Tailwind CSS", "DaisyUI", "JSON Server", "React Router"],
-        "livePreviewUrl": "https://lws-learning-portal-mjaumi.netlify.app",
-        "githubClientUrl": "https://github.com/mjaumi/lws-10-learning-portal"
+        "title": "Sticky Notes",
+        "thumbnail": "https://i.ibb.co/dJDdVCH/sticky-notes.png",
+        "description": "A task management application where user can add, update, delete or search tasks which will manage their day to day activities.",
+        "tags": ["Next.js", "React", "Motion", "Socket.IO", "TypeScript", "Redux Toolkit", "RTK Query", "React Redux", "Tailwind CSS"],
+        "livePreviewUrl": "https://sticky-notes-three-olive.vercel.app",
+        "githubClientUrl": "https://github.com/mjaumi/NEXT-sticky-notes"
     },
     {
         "id": 2,
-        "title": "Task Manager",
-        "thumbnail": "https://i.ibb.co/X4zDzVv/task-manager.png",
-        "description": "A task manager web application where user can add, edit or delete tasks and can manage them accordingly. Here user can also search tasks from the search box.",
-        "tags": ["React", "RTK Query", "Redux Toolkit","React Redux", "Tailwind CSS", "JSON Server", "React Router"],
-        "livePreviewUrl": "https://lws-task-manager-mjaumi.netlify.app",
-        "githubClientUrl": "https://github.com/mjaumi/lws-09-task-manager"
+        "title": "REST Countries",
+        "thumbnail": "https://i.ibb.co/mXsDh2B/rest-countries.png",
+        "description": "A Next.js application where user can achieve knowledge about countries of the world. All the countries data is implemented using REST Countries API.",
+        "tags": ["Next.js", "React", "REST API", "TypeScript", "Tailwind CSS", "Routing", "Theme Mode"],
+        "livePreviewUrl": "https://rest-countries-with-next.vercel.app",
+        "githubClientUrl": "https://github.com/mjaumi/Frontend-Mentor---rest-countries-api-with-color-theme-switcher"
     },
     {
         "id": 3,

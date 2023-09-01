@@ -127,76 +127,83 @@
     },
     {
         "id": 19,
+        "skillName": "Netlify",
+        "icon": "SiNetlify",
+        "color": "#32E6E2",
+        "url": "https://app.netlify.com"
+    },
+    {
+        "id": 20,
         "skillName": "Vercel",
         "icon": "SiVercel",
         "color": "#FFFFFF",
         "url": "https://vercel.com"
     },
     {
-        "id": 20,
+        "id": 21,
         "skillName": "Heroku",
         "icon": "SiHeroku",
         "color": "#430098",
         "url": "https://www.heroku.com"
     },
     {
-        "id": 21,
+        "id": 22,
         "skillName": "Firebase",
         "icon": "SiFirebase",
         "color": "#F88B21",
         "url": "https://firebase.google.com"
     },
     {
-        "id": 22,
+        "id": 23,
         "skillName": "Socket.IO",
         "icon": "SiSocketdotio",
         "color": "#FFFFFF",
         "url": "https://socket.io"
     },
     {
-        "id": 23,
+        "id": 24,
         "skillName": "Git",
         "icon": "BsGit",
         "color": "#F64D27",
         "url": "https://git-scm.com"
     },
     {
-        "id": 24,
+        "id": 25,
         "skillName": "GitHub",
         "icon": "BsGithub",
         "color": "#BABBBD",
         "url": "https://github.com"
     },
     {
-        "id": 25,
+        "id": 26,
         "skillName": "VS Code",
         "icon": "TbBrandVscode",
         "color": "#317AC6",
         "url": "https://code.visualstudio.com"
     },
     {
-        "id": 26,
+        "id": 27,
         "skillName": "NPM",
         "icon": "TbBrandNpm",
         "color": "#CC3534",
         "url": "https://www.npmjs.com"
     },
     {
-        "id": 27,
+        "id": 28,
         "skillName": "Figma",
         "icon": "IoLogoFigma",
         "color": "#1ABCFE",
         "url": "https://www.figma.com"
     },
     {
-        "id": 28,
+        "id": 29,
         "skillName": "Photoshop",
         "icon": "SiAdobephotoshop",
         "color": "#2DAAFF",
         "url": "https://en.wikipedia.org/wiki/Adobe_Photoshop"
     },
     {
-        "id": 29,
+        "id": 30,
         "skillName": "Illustrator",
         "icon": "SiAdobeillustrator",
         "color": "#FF9C00",

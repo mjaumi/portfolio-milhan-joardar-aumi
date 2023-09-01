@@ -18,9 +18,9 @@ const Hero = ({ hasSplashAnimFinished, setCurrentSection }) => {
         pause: !hasSplashAnimFinished,
     });
 
-    // handler function to handle download resume
+    // handler function to handle resume download
     const downloadResumeHandler = () => {
-        saveAs('https://drive.google.com/file/d/1P_qB7d6S5uvNK0Alas7Uz8O43bG6jKVz/view?usp=sharing', 'Resume of Milhan Joardar Aumi.pdf');
+        saveAs('https://drive.google.com/file/d/1Ak_QrWT_ybWDYQw7AN0GgaI4hlTY0iCc/view?usp=sharing', 'Resume-of-Milhan-Joardar-Aumi.pdf');
     }
 
     // handler function to handle scroll to contact section

@@ -32,7 +32,7 @@ const Experiences = ({ setCurrentSection }) => {
             <InView as='div' threshold={1.0} onChange={inView => inView && setCurrentSection('Experiences')}>
                 <animated.div ref={ref} style={animProps} className='py-20 w-[95%] xl:w-4/5 mx-auto flex flex-col xl:flex-row'>
                     <div className='w-full xl:w-1/4 2xl:w-1/5 overflow-x-auto xl:overflow-x-hidden overflow-y-hidden'>
-                        <div style={{ width: `${(isMobile && experiences.length > 2) ? '700px' : '100%'}` }} className='relative h-full flex xl:block border-b-2 xl:border-b-0 xl:border-r-2 border-base-100'>
+                        <div style={{ width: `${(isMobile && experiences.length > 2) ? '700px' : '100%'}` }} className='relative h-full flex xl:block border-b-2 xl:border-b-0 xl:border-r-2 border-base-100 mx-auto'>
                             {
                                 experiences.map((experience, index) => <button
                                     key={experience.id}
@@ -68,7 +68,7 @@ const Experiences = ({ setCurrentSection }) => {
                             </p>
                             <p className='mt-4 text-center xl:text-left text-sm xl:text-base'>{experiences[selectedExperience]?.jobDescription}</p>
                         </div>
-                        <div className='mt-5 flex justify-center xl:justify-start'>
+                        <div className='mt-5 flex justify-center xl:justify-start space-x-3'>
                             {
                                 experiences[selectedExperience]?.linkedInPageUrl &&
                                 <a href={experiences[selectedExperience].linkedInPageUrl} className='hover:text-neutral duration-300' target='_blank' rel='noreferrer'>
@@ -83,13 +83,13 @@ const Experiences = ({ setCurrentSection }) => {
                             }
                             {
                                 experiences[selectedExperience]?.facebookPageUrl &&
-                                <a href={experiences[selectedExperience].facebookPageUrl} className='hover:text-neutral duration-300 ml-3' target='_blank' rel='noreferrer'>
+                                <a href={experiences[selectedExperience].facebookPageUrl} className='hover:text-neutral duration-300' target='_blank' rel='noreferrer'>
                                     <FaFacebookSquare className='h-8 w-8' />
                                 </a>
                             }
                             {
                                 experiences[selectedExperience]?.instagramPageUrl &&
-                                <a href={experiences[selectedExperience].instagramPageUrl} className='hover:text-neutral duration-300 ml-3' target='_blank' rel='noreferrer'>
+                                <a href={experiences[selectedExperience].instagramPageUrl} className='hover:text-neutral duration-300' target='_blank' rel='noreferrer'>
                                     <BsInstagram className='h-8 w-8' />
                                 </a>
                             }

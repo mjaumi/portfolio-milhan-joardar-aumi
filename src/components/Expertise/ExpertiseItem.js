@@ -1,56 +1,49 @@
 import React from 'react';
-import loadable from '@loadable/component'
+import * as BootstrapIcons from 'react-icons/bs';
+import * as FontAwesomeIcons from 'react-icons/fa';
+import * as IonIcons from 'react-icons/io5';
+import * as SimpleIcons from 'react-icons/si';
+import * as TablerIcons from 'react-icons/tb';
 
 const ExpertiseItem = ({ skill }) => {
     // destructuring the skill object here
     const { skillName, icon, color, url } = skill || {};
 
-    // splitting the library and iconName here
-    const [library, iconName] = icon.split('/');
-
     // choosing the logo here
-    let ReactIcons = null;
+    let ReactIcon = null;
 
     // dynamically importing icon libraries to reduce memory usage
-    switch (library) {
-        case 'fa':
-            ReactIcons = loadable.lib(() => import('react-icons/fa'));
+    switch (icon.slice(0, 2)) {
+        case 'Fa':
+            ReactIcon = FontAwesomeIcons[icon];
             break;
 
-        case 'tb':
-            ReactIcons = loadable.lib(() => import('react-icons/tb'));
+        case 'Tb':
+            ReactIcon = TablerIcons[icon];
             break;
 
-        case 'io5':
-            ReactIcons = loadable.lib(() => import('react-icons/io5'));
+        case 'Io':
+            ReactIcon = IonIcons[icon];
             break;
 
-        case 'si':
-            ReactIcons = loadable.lib(() => import('react-icons/si'));
+        case 'Si':
+            ReactIcon = SimpleIcons[icon];
             break;
 
-        case 'bs':
-            ReactIcons = loadable.lib(() => import('react-icons/bs'));
+        case 'Bs':
+            ReactIcon = BootstrapIcons[icon];
             break;
 
         default:
             break;
     }
 
-    console.log(ReactIcons);
-
     // rendering expertise item component here
     return (
         <div className='border-2 border-accent rounded-lg py-3 hover:cursor-pointer hover:scale-110 duration-300'>
             <a href={url} target='_blank' rel='noreferrer'>
                 <div className='flex flex-col items-center justify-center'>
-                    <ReactIcons>
-                        {
-                            ({ [iconName]: Icon }) =>
-                                <Icon style={{ color: `${color}` }} className='w-10 h-10' />
-
-                        }
-                    </ReactIcons>
+                    <ReactIcon style={{ color: `${color}` }} className='w-10 h-10' />
                     <p style={{ color: `${color}` }} className='mt-2 font-light text-sm'>{skillName}</p>
                 </div>
             </a>

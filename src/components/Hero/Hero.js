@@ -1,7 +1,6 @@
 import React from 'react';
 import { BsClipboardCheckFill } from 'react-icons/bs';
 import { ImDownload } from 'react-icons/im';
-import { saveAs } from 'file-saver';
 import { animated, useSpring } from '@react-spring/web';
 import PortfolioButton from '../Buttons/PortfolioButton';
 import { InView } from 'react-intersection-observer';
@@ -18,9 +17,9 @@ const Hero = ({ hasSplashAnimFinished, setCurrentSection }) => {
         pause: !hasSplashAnimFinished,
     });
 
-    // handler function to handle resume download
+    // handler function to handle resume download redirection
     const downloadResumeHandler = () => {
-        saveAs('https://drive.google.com/file/d/1Ak_QrWT_ybWDYQw7AN0GgaI4hlTY0iCc/view?usp=sharing', 'Resume-of-Milhan-Joardar-Aumi.pdf');
+        window.open('https://drive.google.com/file/d/1Ak_QrWT_ybWDYQw7AN0GgaI4hlTY0iCc/view?usp=sharing', '_blank', 'noreferrer');
     }
 
     // handler function to handle scroll to contact section
@@ -65,6 +64,7 @@ const Hero = ({ hasSplashAnimFinished, setCurrentSection }) => {
                                 <BsClipboardCheckFill className='mr-2' />
                                 Hire Me
                             </PortfolioButton>
+
                             <PortfolioButton
                                 onClickHandler={downloadResumeHandler}
                                 additionalClassNames={'text-primary btn-accent hover:text-accent border-accent'}

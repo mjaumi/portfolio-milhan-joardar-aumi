@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { BsLinkedin, BsInstagram } from 'react-icons/bs';
-import { TbWorldWww } from 'react-icons/tb';
-import { FaFacebookSquare } from 'react-icons/fa';
 import { animated } from '@react-spring/web';
+import React, { useEffect, useState } from 'react';
+import { BsInstagram, BsLinkedin } from 'react-icons/bs';
+import { FaFacebookSquare } from 'react-icons/fa';
+import { TbWorldWww } from 'react-icons/tb';
+import { InView } from 'react-intersection-observer';
+import SectionLayout from '../../Layout/SectionLayout';
 import useDivFadeInAnimation from '../../hooks/useDivFadeInAnimation';
 import useIsMobileDevice from '../../hooks/useIsMobileDevice';
-import SectionLayout from '../../Layout/SectionLayout';
-import { InView } from 'react-intersection-observer';
 
 const Experiences = ({ setCurrentSection }) => {
     // integration of custom hooks hooks here

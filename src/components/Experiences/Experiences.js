@@ -35,7 +35,7 @@ const Experiences = ({ setCurrentSection }) => {
                         <div style={{ width: `${(isMobile && experiences.length > 2) ? '700px' : '100%'}` }} className='relative h-full flex xl:block border-b-2 xl:border-b-0 xl:border-r-2 border-base-100 mx-auto'>
                             {
                                 experiences.map((experience, index) => <button
-                                    key={experience.id}
+                                    key={index}
                                     onClick={() => setSelectedExperience(index)}
                                     className={`h-12 w-full xl:text-left text-sm xl:text-base ${selectedExperience === index && 'text-neutral'}`}>
                                     {experience.companyName}

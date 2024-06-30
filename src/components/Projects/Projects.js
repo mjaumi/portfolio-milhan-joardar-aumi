@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import ProjectItem from './ProjectItem';
 import { animated } from '@react-spring/web';
+import React, { useEffect, useState } from 'react';
 import { BsArrowRight } from 'react-icons/bs';
-import useDivFadeInAnimation from '../../hooks/useDivFadeInAnimation';
-import SectionLayout from '../../Layout/SectionLayout';
 import { InView } from 'react-intersection-observer';
+import SectionLayout from '../../Layout/SectionLayout';
+import useDivFadeInAnimation from '../../hooks/useDivFadeInAnimation';
+import ProjectItem from './ProjectItem';
 
 const Projects = ({ setCurrentSection }) => {
     // integration of custom hooks hooks here

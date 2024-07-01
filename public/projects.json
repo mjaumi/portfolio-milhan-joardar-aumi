@@ -4,7 +4,17 @@
         "title": "Sticky Notes",
         "thumbnail": "https://i.ibb.co/dJDdVCH/sticky-notes.png",
         "description": "A task management application where user can add, update, delete or search tasks which will manage their day to day activities.",
-        "tags": ["Next.js", "React", "Motion", "Socket.IO", "TypeScript", "Redux Toolkit", "RTK Query", "React Redux", "Tailwind CSS"],
+        "tags": [
+            "Next.js",
+            "React",
+            "Motion",
+            "Socket.IO",
+            "TypeScript",
+            "Redux Toolkit",
+            "RTK Query",
+            "React Redux",
+            "Tailwind CSS"
+        ],
         "livePreviewUrl": "https://sticky-notes-three-olive.vercel.app",
         "githubClientUrl": "https://github.com/mjaumi/NEXT-sticky-notes"
     },
@@ -13,7 +23,15 @@
         "title": "REST Countries",
         "thumbnail": "https://i.ibb.co/mXsDh2B/rest-countries.png",
         "description": "A Next.js application where user can achieve knowledge about countries of the world. All the countries data is implemented using REST Countries API.",
-        "tags": ["Next.js", "React", "REST API", "TypeScript", "Tailwind CSS", "Routing", "Theme Mode"],
+        "tags": [
+            "Next.js",
+            "React",
+            "REST API",
+            "TypeScript",
+            "Tailwind CSS",
+            "Routing",
+            "Theme Mode"
+        ],
         "livePreviewUrl": "https://rest-countries-with-next.vercel.app",
         "githubClientUrl": "https://github.com/mjaumi/Frontend-Mentor---rest-countries-api-with-color-theme-switcher"
     },
@@ -22,7 +40,17 @@
         "title": "Cars Arena",
         "thumbnail": "https://i.ibb.co/r7x84CF/cars-arena.png",
         "description": "A car spare parts manufacturer company website where user can buy spare parts in retail price. Here admin can add new product and can confirm someone's order after the payment is confirmed.",
-        "tags": ["React", "Tailwind CSS", "DaisyUI", "Express.js", "MongoDB", "Node.js", "Firebase", "Stripe", "React Router"],
+        "tags": [
+            "React",
+            "Tailwind CSS",
+            "DaisyUI",
+            "Express.js",
+            "MongoDB",
+            "Node.js",
+            "Firebase",
+            "Stripe",
+            "React Router"
+        ],
         "livePreviewUrl": "https://cars-arena.web.app",
         "githubClientUrl": "https://github.com/mjaumi/phero-assignment12-cars-arena-client-side",
         "githubServerUrl": "https://github.com/mjaumi/phero-assignment12-cars-arena-server-side"
@@ -32,7 +60,15 @@
         "title": "Byteware",
         "thumbnail": "https://i.ibb.co/dK19Ysb/byte-ware.png",
         "description": "A warehouse management system where user can add, remove or edit products from the server. User can also deliver products and track the sales overview. To perform all the tasks, user must be logged in to our database.",
-        "tags": ["React", "Tailwind CSS", "Express.js", "MongoDB", "Node.js", "Firebase", "React Router"],
+        "tags": [
+            "React",
+            "Tailwind CSS",
+            "Express.js",
+            "MongoDB",
+            "Node.js",
+            "Firebase",
+            "React Router"
+        ],
         "livePreviewUrl": "https://byteware-warehouse-management.web.app",
         "githubClientUrl": "https://github.com/mjaumi/phero-assignment11-byteware-warehouse-management-system-client-side",
         "githubServerUrl": "https://github.com/mjaumi/phero-assignment11-byteware-warehouse-management-system-server-side"
@@ -42,7 +78,13 @@
         "title": "Aumi Tuition Care",
         "thumbnail": "https://i.ibb.co/Fb1qzxN/aumi-tuition-care.png",
         "description": "A tutor's website where user can find the tutor's service packages and can checkout with any of the package they want. To checkout user must be logged in to the server",
-        "tags": ["React", "Tailwind CSS", "Firebase", "React Router", "React Rating"],
+        "tags": [
+            "React",
+            "Tailwind CSS",
+            "Firebase",
+            "React Router",
+            "React Rating"
+        ],
         "livePreviewUrl": "https://aumi-tuition-care.web.app",
         "githubClientUrl": "https://github.com/mjaumi/phero-assignment10-aumi-tuition-care"
     },
@@ -51,7 +93,13 @@
         "title": "Review Hub",
         "thumbnail": "https://i.ibb.co/C2mZNGW/review-hub.png",
         "description": "A website where user can find reviews about Xbox Series X and also can see their revenue data.",
-        "tags": ["React", "Tailwind CSS", "React Router", "Recharts", "React Rating"],
+        "tags": [
+            "React",
+            "Tailwind CSS",
+            "React Router",
+            "Recharts",
+            "React Rating"
+        ],
         "livePreviewUrl": "https://review-hub-018698.netlify.app",
         "githubClientUrl": "https://github.com/mjaumi/phero-assignment9-review-hub-react"
     }

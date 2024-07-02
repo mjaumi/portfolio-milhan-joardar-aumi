@@ -26,7 +26,7 @@ const Projects = ({ setCurrentSection }) => {
                 <animated.div ref={ref} style={animProps} className='w-[95%] xl:w-4/5 mx-auto py-20'>
                     <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5'>
                         {
-                            projects.map(project => <ProjectItem
+                            projects.map((project) => <ProjectItem
                                 key={project.id}
                                 project={project}
                             />)

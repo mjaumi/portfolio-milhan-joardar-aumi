@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "title": "Sticky Notes",
         "thumbnail": "https://i.ibb.co/dJDdVCH/sticky-notes.png",
         "description": "A task management application where user can add, update, delete or search tasks which will manage their day to day activities.",

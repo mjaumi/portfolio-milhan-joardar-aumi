@@ -18,7 +18,6 @@
         "githubClientUrl": "https://github.com/mjaumi/NEXT-sticky-notes"
     },
     {
-        "id": 2,
         "title": "REST Countries",
         "thumbnail": "https://i.ibb.co/mXsDh2B/rest-countries.png",
         "description": "A Next.js application where user can achieve knowledge about countries of the world. All the countries data is implemented using REST Countries API.",

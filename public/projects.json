@@ -34,7 +34,6 @@
         "githubClientUrl": "https://github.com/mjaumi/Frontend-Mentor---rest-countries-api-with-color-theme-switcher"
     },
     {
-        "id": 3,
         "title": "Cars Arena",
         "thumbnail": "https://i.ibb.co/r7x84CF/cars-arena.png",
         "description": "A car spare parts manufacturer company website where user can buy spare parts in retail price. Here admin can add new product and can confirm someone's order after the payment is confirmed.",

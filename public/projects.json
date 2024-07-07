@@ -53,7 +53,6 @@
         "githubServerUrl": "https://github.com/mjaumi/phero-assignment12-cars-arena-server-side"
     },
     {
-        "id": 4,
         "title": "Byteware",
         "thumbnail": "https://i.ibb.co/dK19Ysb/byte-ware.png",
         "description": "A warehouse management system where user can add, remove or edit products from the server. User can also deliver products and track the sales overview. To perform all the tasks, user must be logged in to our database.",

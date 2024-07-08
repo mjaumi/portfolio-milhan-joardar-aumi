@@ -70,7 +70,6 @@
         "githubServerUrl": "https://github.com/mjaumi/phero-assignment11-byteware-warehouse-management-system-server-side"
     },
     {
-        "id": 5,
         "title": "Aumi Tuition Care",
         "thumbnail": "https://i.ibb.co/Fb1qzxN/aumi-tuition-care.png",
         "description": "A tutor's website where user can find the tutor's service packages and can checkout with any of the package they want. To checkout user must be logged in to the server",

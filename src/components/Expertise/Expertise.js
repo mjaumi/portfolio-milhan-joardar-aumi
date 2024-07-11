@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import ExpertiseItem from './ExpertiseItem';
 import { animated } from '@react-spring/web';
-import useDivFadeInAnimation from '../../hooks/useDivFadeInAnimation';
-import SectionLayout from '../../Layout/SectionLayout';
+import React, { useEffect, useState } from 'react';
 import { InView } from 'react-intersection-observer';
+import SectionLayout from '../../Layout/SectionLayout';
+import useDivFadeInAnimation from '../../hooks/useDivFadeInAnimation';
+import ExpertiseItem from './ExpertiseItem';
 
 const Expertise = ({ setCurrentSection }) => {
     // integration of custom hooks hooks here

@@ -26,7 +26,7 @@ const Expertise = ({ setCurrentSection }) => {
                 <animated.div ref={ref} style={animProps} className='py-20 grid grid-cols-3 md:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 gap-5 w-[95%] xl:w-4/5 mx-auto'>
                     {
                         skillSet?.map((skill, index) => <ExpertiseItem
-                            key={skill.id}
+                            key={index}
                             skill={skill}
                         />)
                     }

@@ -1,12 +1,11 @@
 [
-     {
+    {
         "skillName": "HTML5",
         "icon": "SiHtml5",
         "color": "#E44C20",
         "url": "https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
     },
     {
-        "id": 2,
         "skillName": "CSS3",
         "icon": "FaCss3Alt",
         "color": "#2566F2",

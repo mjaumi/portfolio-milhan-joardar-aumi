@@ -18,8 +18,7 @@
         "url": "https://tailwindcss.com"
     },
     {
-        "id": 4,
-        "skillName": "Bootstrap",
+       "skillName": "Bootstrap",
         "icon": "SiBootstrap",
         "color": "#730FF5",
         "url": "https://getbootstrap.com"

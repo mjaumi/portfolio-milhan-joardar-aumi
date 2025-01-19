@@ -20,11 +20,21 @@
   {
     "companyName": "Pioneer Alpha",
     "designation": "Front-End Developer",
-    "duration": "September 2023 - Present",
+    "duration": "September 2023 - March 2024",
     "jobType": "Full-time",
     "jobDescription": "Working as a Front-End Developer at Pioneer Alpha where my responsibility is to collaborating with the front-end, back-end & the UI/UX team and developing state of the art web applications using Next.js, React.js, Tailwind CSS etc. This is a remote opportunity where I work am assigned tasks from the team lead through Asana and I also report the team lead through Asana once the assigned task is finished.",
     "facebookPageUrl": "https://www.facebook.com/pioneer.alpha.ltd",
     "linkedInPageUrl": "https://www.linkedin.com/company/pioneer-alpha",
     "websiteUrl": "https://pioneeralpha.com"
+  },
+  {
+    "companyName": "Kirrhosoft",
+    "designation": "Junior Software Engineer",
+    "duration": "April 2024 - Present",
+    "jobType": "Full-time",
+    "jobDescription": "Working as a Junior Software Engineer at Kirrhosoft where I design and develop web applications using Next.js, React.js, Tailwind CSS, and TypeScript, collaborating closely with the backend team to architect complex business logic. I integrate APIs into Django and Python applications, lead and mentor a small frontend team to ensure high-quality delivery, and continuously troubleshoot and fix bugs to maintain project longevity. Additionally, I conduct client meetings to gather, analyze, and evaluate requirements, manage multiple projects simultaneously, and stay updated on new technologies to implement as needed.",
+    "facebookPageUrl": "https://www.facebook.com/kirrhosoft/",
+    "linkedInPageUrl": "https://www.linkedin.com/company/kirrhosoft-ltd/",
+    "websiteUrl": "https://www.kirrhosoft.com"
   }
 ]
